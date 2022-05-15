@@ -9,10 +9,9 @@ def brkc(m: str, f: str):
     for i in range(1, len(chars)):
         decmsg=dec(m, i)
         print(f"{i}: {decmsg}")
-        for x in range(len(decmsg)):
-            for y in range(x, len(decmsg)):
-                if decmsg[x:y].lower() in t:
-                        decm.append(decmsg)
+        for x in t:
+            if x.upper() in decmsg:
+                decm.append(decmsg)
     return Counter(decm)
 if __name__ == "__main__":
     a=argv[1]
