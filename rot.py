@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from string import ascii_uppercase as chars
 from sys import argv
 
@@ -16,7 +18,12 @@ def decrypt(s: str, i: int):
             if s[x].upper() == chars[y]:
                 dec+=chars[(y-i)%len(chars)]
     return dec
+
 if __name__ == "__main__":
-    a=argv[1]
-    b=int(argv[2])
-    print(encrypt(a, b), decrypt(a, b))
+    try:
+        a=argv[1]
+        b=int(argv[2])
+    except IndexError:
+        a=input("Give text to encode/decode: ")
+        b=int(input("Type how many shifts do you want to do: "))
+    print(f"Encrypted: {encrypt(a, b)}\nDecrypted: {decrypt(a, b)}")
