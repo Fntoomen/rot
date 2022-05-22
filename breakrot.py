@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.10
+
 from rot import rot
 from sys import argv
 from collections import Counter
