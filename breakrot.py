@@ -10,10 +10,11 @@ def breakRot(m: str, f: str, x: int):
     for i in range(1, 26):
         msg=rot(m, -i)
         print(f"{i}: {msg}")
-        for x in t:
-            if x.upper() in msg.upper():
+        for j in t:
+            if j.upper() in msg.upper():
                 poss.append(msg)
-    return Counter(poss)
+    counter = Counter(poss)
+    return f"\033[1;32m {counter} \033[3;32m"
 
 if __name__ == "__main__":
     try:

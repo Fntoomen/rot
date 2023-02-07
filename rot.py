@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.10
+#!/usr/bin/env python3
 
 from string import ascii_lowercase as lc, ascii_uppercase as uc
 from sys import argv
