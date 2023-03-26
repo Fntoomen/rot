@@ -1,5 +1,5 @@
 # ROT
-## Python script that encodes, decodes and crackes ROT cipher
+## Python script that encodes, decodes and crackes ROT cipher.
 
 # Usage:
 	python rot.py "Message to encode/decode" "Number of shifts"
