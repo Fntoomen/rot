@@ -14,7 +14,8 @@ def breakRot(m: str, f: str, x: int):
             if j.upper() in msg.upper():
                 poss.append(msg)
     counter = Counter(poss)
-    return f"\033[1;32m {counter} \033[3;32m"
+    print(f"\033[94m{counter}\033[3;32m")
+    print(f"\033[1;32mAnswer: {counter.most_common(1)[0][0]}\033[3;32m")
 
 if __name__ == "__main__":
     try:
@@ -25,4 +26,4 @@ if __name__ == "__main__":
         a=input("Give encoded text to break: ")
         b=input("Give filename of file which contains wordlist: ")
         c=int(input("Type how many words to read from the wordlist ('-1'=every): "))
-    print(breakRot(a, b, c))
+    breakRot(a, b, c)
