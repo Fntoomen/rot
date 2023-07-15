@@ -15,7 +15,7 @@ def breakRot(m: str, f: str, x: int):
                 poss.append(msg)
     counter = Counter(poss)
     print(f"\033[94m{counter}\033[3;32m")
-    print(f"\033[1;32mAnswer: {counter.most_common(1)[0][0]}\033[3;32m")
+    print(f"\n\n\nAnswer: \033[1;32m{counter.most_common(1)[0][0]}\033[3;32m")
 
 if __name__ == "__main__":
     try:
